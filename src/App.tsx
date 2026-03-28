@@ -6,6 +6,7 @@ import { DashboardLayout } from '@/layouts/DashboardLayout'
 import { UsersPage } from '@/pages/UsersPage'
 import { RolesPage } from '@/pages/RolesPage'
 import { AppsPage } from '@/pages/AppsPage'
+import { ServicesPage } from '@/pages/ServicesPage'
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth()
@@ -39,6 +40,7 @@ function AppRoutes() {
                 <Route path="/users" element={<UsersPage />} />
                 <Route path="/roles" element={<RolesPage />} />
                 <Route path="/apps" element={<AppsPage />} />
+                <Route path="/services" element={<ServicesPage />} />
               </Routes>
             </DashboardLayout>
           </ProtectedRoute>
