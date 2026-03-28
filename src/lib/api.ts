@@ -1,6 +1,7 @@
 import { auth } from '@/lib/firebase'
 
-const API_BASE_URL = (import.meta.env.VITE_GATEWAY_URL || 'http://localhost:8080') + '/api/v1'
+const GATEWAY_URL = import.meta.env.VITE_GATEWAY_URL || '/api'
+const API_BASE_URL = `${GATEWAY_URL}/v1`
 
 interface ApiResponse<T> {
   success: boolean
